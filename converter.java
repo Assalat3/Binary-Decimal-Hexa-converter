@@ -1,5 +1,3 @@
-package BinHexaConverter;
-
 import javafx.scene.control.TextField;
 
 class converter {
