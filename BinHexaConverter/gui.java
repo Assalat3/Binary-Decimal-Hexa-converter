@@ -80,7 +80,7 @@ public class gui extends Application {
         });
 
         btnClear.setMaxWidth(buttonWidth);
-
+        btnClear.setOnAction(e -> clearValues(txfBin, txfBase10, txfHexa));
 
         btnClose.setMaxWidth(buttonWidth);
         btnClose.setOnAction(e -> primaryStage.close());
@@ -126,6 +126,12 @@ public class gui extends Application {
         base10.setEditable(false);
         base10.setText("");
         hexa.setEditable(true);
+    }
+
+    private static void clearValues(TextField bin, TextField decimal, TextField hexa){
+        bin.setText("");
+        decimal.setText("");
+        hexa.setText("");
     }
 
 }
