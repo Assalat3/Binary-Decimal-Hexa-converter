@@ -12,8 +12,6 @@ class converter {
             base10.setText(Integer.toString(decimalValue));
             hexa.setText(hexaValue);
 
-            System.out.println(decimalValue + " " + hexaValue); //TROUBLESHOOT
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -28,8 +26,6 @@ class converter {
 
             binary.setText(binaryValue);
             hexa.setText(hexaValue);
-
-            System.out.println(binaryValue + " " + hexaValue);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,8 +43,6 @@ class converter {
 
             binary.setText(binaryValue);
             decimal.setText(decimalValue);
-
-            System.out.println(binaryValue + " " + decimalValue);
 
         }catch (Exception e) {
             e.printStackTrace();
