@@ -71,11 +71,11 @@ public class gui extends Application {
         btnConvert.setMaxWidth(buttonWidth);
         btnConvert.setOnAction(e ->{
             if (conversionType.getSelectedToggle() == rbnBin){
-                converter.convertBinary(txfBin.getText());
+                converter.convertBinary(txfBin.getText(), txfBase10, txfHexa);
             } else if (conversionType.getSelectedToggle() == rbnBase10){
-                converter.convertDecimal(Integer.parseInt(txfBase10.getText()));
+                converter.convertDecimal(Integer.parseInt(txfBase10.getText()), txfBin, txfHexa);
             } else if (conversionType.getSelectedToggle() == rbnHexa){
-                converter.convertHexa(txfHexa.getText());
+                converter.convertHexa(txfHexa.getText(), txfBin, txfBase10);
             }
         });
 
@@ -105,35 +105,26 @@ public class gui extends Application {
     }
 
     private static void binaryConversion(TextField bin, TextField base10, TextField hexa){
-        bin.setDisable(false);
         bin.setEditable(true);
-        base10.setDisable(true);
         base10.setEditable(false);
         base10.setText("");
-        hexa.setDisable(true);
         hexa.setEditable(false);
         hexa.setText("");
     }
 
     private static void decimalConversion(TextField bin, TextField base10, TextField hexa){
-        bin.setDisable(true);
         bin.setEditable(false);
         bin.setText("");
-        base10.setDisable(false);
         base10.setEditable(true);
-        hexa.setDisable(true);
         hexa.setEditable(false);
         hexa.setText("");
     }
 
     private static void hexaConversion(TextField bin, TextField base10, TextField hexa){
-        bin.setDisable(true);
         bin.setEditable(false);
         bin.setText("");
-        base10.setDisable(true);
         base10.setEditable(false);
         base10.setText("");
-        hexa.setDisable(false);
         hexa.setEditable(true);
     }
 
